@@ -17,7 +17,7 @@ A Discord Rich Presence App to set your own custom rich presence.
 * ```pipenv shell```
 * ```pipenv install --dev```
 *  For Linux 
-    * ```./build.sh 
+    * ```./build.sh```
     * You will get a tar package inside "finalpackage" folder
 *  For Windows 
     * ```pyinstaller --onefile app.py```
