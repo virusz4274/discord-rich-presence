@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>415</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>415</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>415</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>DISCORD  RICH PRESENCE by virusz4274</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>381</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="load_saved">
+       <property name="text">
+        <string>LOAD</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="saved_list"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="profile_name">
+       <property name="text">
+        <string>PROFILE NAME</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="profile_val"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="client_id">
+       <property name="text">
+        <string>CLIENT ID</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="client_id_val"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="state">
+       <property name="text">
+        <string>STATE</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="state_val"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="details">
+       <property name="text">
+        <string>DETAILS</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="details_val">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="large_image_key">
+       <property name="text">
+        <string>LARGE IMAGE KEY</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="large_image_key_val"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="large_image_text">
+       <property name="text">
+        <string>LARGE IMAGE TEXT</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="large_image_text_val"/>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="small_image_key">
+       <property name="text">
+        <string>SMALL IMAGE KEY</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="small_image_key_val"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="small_image_text">
+       <property name="text">
+        <string>SMALL IMAGE TEXT</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="small_image_text_val"/>
+     </item>
+     <item row="10" column="0">
+      <widget class="QCheckBox" name="button_1">
+       <property name="text">
+        <string>BUTTON 1</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QCheckBox" name="button_2">
+       <property name="text">
+        <string>BUTTON 2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="button_1_label">
+       <property name="text">
+        <string>LABEL</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="button_1_label_val"/>
+     </item>
+     <item row="12" column="0">
+      <widget class="QLabel" name="button_1_url">
+       <property name="text">
+        <string>URL</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="1">
+      <widget class="QLineEdit" name="button_1_url_val"/>
+     </item>
+     <item row="13" column="0">
+      <widget class="QLabel" name="button_2_label">
+       <property name="text">
+        <string>LABEL</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="1">
+      <widget class="QLineEdit" name="button_2_label_val"/>
+     </item>
+     <item row="14" column="0">
+      <widget class="QLabel" name="button_2_url">
+       <property name="text">
+        <string>URL</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="1">
+      <widget class="QLineEdit" name="button_2_url_val"/>
+     </item>
+     <item row="15" column="0">
+      <widget class="QCheckBox" name="timer">
+       <property name="text">
+        <string>ENABLE TIMER</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="1">
+      <widget class="QPushButton" name="save">
+       <property name="text">
+        <string>SAVE</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="0">
+      <widget class="QPushButton" name="delete_saved">
+       <property name="text">
+        <string>DELETE SAVED</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="1">
+      <widget class="QPushButton" name="startstop">
+       <property name="text">
+        <string>START / STOP</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="new_profile">
+       <property name="text">
+        <string>NEW</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>415</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
