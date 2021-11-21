@@ -6,9 +6,9 @@ A Discord Rich Presence App to set your own custom rich presence.
 #BUILDS
 Ready to use package are available inside "finalpackage" folder, no need to install any depedency just run the app. There is a slight chance Antivirus might call it a virus / trojan, it is a false alarm. If you are not confident or dont trust you can build the package following the instructions below.
 
-[Linux](https://github.com/virusz4274/discord-rich-presence/raw/main/finalpackage/linux.tar)
+[Linux](https://github.com/virusz4274/discord-rich-presence/releases)
 
-[Windows](https://github.com/virusz4274/discord-rich-presence/raw/main/finalpackage/windows_dist.zip)
+[Windows](https://github.com/virusz4274/discord-rich-presence/releases)
 
 
 
