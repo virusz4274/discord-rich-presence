@@ -13,16 +13,16 @@ Ready to use package are available inside "finalpackage" folder, no need to inst
 
 
 
-##Depedency
+## Depedency
 * Python
 * pip
 * pipenv ( if you have pip , ```run pip install pipenv``` )
 
-##To Run
+## To Run#
 * ```pipenv shell```
 * ```python app.py```
 
-##To Build Package
+## To Build Package
 * ```pipenv shell```
 * ```pipenv install --dev```
 *  For Linux 
