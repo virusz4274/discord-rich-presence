@@ -168,7 +168,7 @@ class MyWindow(QMainWindow):
         self.button_2.setChecked(load_data["button 2 state"]==2)
         self.button_2_label_val.setText(load_data["button 2 label"])
         self.button_2_url_val.setText(load_data["button 2 url"])
-        self.timer.setChecked(load_data["timer state"]=="2")
+        self.timer.setChecked(load_data["timer state"]==2)
 
 
 
