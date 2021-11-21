@@ -1,9 +1,9 @@
 import sys
 from types import DynamicClassAttribute
-from PyQt5 import QtWidgets
+#from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog,  QApplication, QMainWindow
 from PyQt5.uic import loadUi
-from pypresence import Presence, presence
+from pypresence import Presence
 import time
 import json
 
@@ -95,8 +95,6 @@ class MyWindow(QMainWindow):
         savedata()
         self.load_saved_list()
 
-
-
     def startstop_fn(self):
         presence_data = self.take_inputs()
         start_presence(presence_data)
@@ -185,21 +183,21 @@ def start_presence(presence_data):
     RPC.connect() # Start the handshake loop
     # Set the presence
     start_time = int(time.time())
-    while True:  # The presence will stay on as long as the program is running
-        if presence_data[14] == 2:
-            if  presence_data[8] == 2 and presence_data[11] == 2:
-                RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7], start=start_time, buttons=[{"label": presence_data[9], "url":presence_data[10]}, {"label": presence_data[12], "url":presence_data[13]}])
-            elif presence_data[8] == 2:
-                RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7], start=start_time, buttons=[{"label": presence_data[9], "url":presence_data[10]}])
-            else:
-                RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7], start=start_time)
+    if presence_data[14] == 2:
+        if  presence_data[8] == 2 and presence_data[11] == 2:
+            RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7], start=start_time, buttons=[{"label": presence_data[9], "url":presence_data[10]}, {"label": presence_data[12], "url":presence_data[13]}])
+        elif presence_data[8] == 2:
+            RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7], start=start_time, buttons=[{"label": presence_data[9], "url":presence_data[10]}])
         else:
-            if  presence_data[8] == 2 and presence_data[11] == 2:
-                RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7],buttons=[{"label": presence_data[9], "url":presence_data[10]}, {"label": presence_data[12], "url":presence_data[13]}])
-            elif presence_data[8] == 2:
-                RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7], buttons=[{"label": presence_data[9], "url":presence_data[10]}])
-            else:
-                RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7])
+            RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7], start=start_time)
+    else:
+        if  presence_data[8] == 2 and presence_data[11] == 2:
+            RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7],buttons=[{"label": presence_data[9], "url":presence_data[10]}, {"label": presence_data[12], "url":presence_data[13]}])
+        elif presence_data[8] == 2:
+            RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7], buttons=[{"label": presence_data[9], "url":presence_data[10]}])
+        else:
+            RPC.update(state=presence_data[2], details=presence_data[3], large_image=presence_data[4], large_text=presence_data[5], small_image=presence_data[6], small_text=presence_data[7])
+    while True:
         time.sleep(15) # Can only update rich presence every 15 seconds
 
 opendata()
