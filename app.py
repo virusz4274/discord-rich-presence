@@ -18,24 +18,6 @@ def opendata():
             data = json.load(json_file)
     except:
         data['Profiles'] = []
-        presence_data = [
-            "Default",
-            "909877597045940255",
-            "By VIRUSZ4274",
-            "USING CUSTOM RICH PRESENCE",
-            "progamer_default",
-            "progamer_default",
-            "games_valorant",
-            "games_valorant",
-            2,
-            "BUY HIGH PERFORMANCE PC",
-            "https://coarde.com",
-            2,
-            "BUY HIGH PERFORMANCE PC",
-            "https://coarde.com",
-            0
-        ]
-        newdata(presence_data)
         savedata()
     
 
